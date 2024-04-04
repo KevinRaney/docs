@@ -29,7 +29,7 @@ The same filters are available for charts you create using insights for {% data 
 
 When you filter a view and then add an item, the filtered metadata will be applied to new item. For example, if you're filtering by `status:"In progress"` and you add an item, the new item will have its status set to "In progress."
 
-You can use filters to produce views for very specific purposes. For example, you could use `assignee:@me status:todo last-updated:5days` to create a view of all work assigned to the current user, with the "todo" status, that hasn't been updated in the last five days. You could create a triage view by using a negative filter, such as `no:label no:assignee repo:octocat/game`, which would show items without a label and without an assignee that are located in the `octocat/game` repository.
+You can use filters to produce views for very specific purposes. For example, you could use `assignee:@me status:todo updated:5days` to create a view of all work assigned to the current user, with the "todo" status, that hasn't been updated in the last five days. You could create a triage view by using a negative filter, such as `no:label no:assignee repo:octocat/game`, which would show items without a label and without an assignee that are located in the `octocat/game` repository.
 
 ## Filtering for fields
 
@@ -144,9 +144,9 @@ You can use the `{number}days` syntax to filter for when items were last updated
 
 | Qualifier  | Example
 | ---------- | -------------
-| <code>last-updated:<em>NUMBER</em>days</code> | **last-updated:1day** will show items last updated one or more days ago.
-|                                               | **last-updated:7days** will show items last updated seven or more days ago.
-|                                               | **-last-updated:10days** will show items that have been updated in the last ten days.
+| <code>updated:<em>NUMBER</em>days</code> | **updated:1day** will show items last updated one or more days ago.
+|                                          | **updated:7days** will show items last updated seven or more days ago.
+|                                          | **-updated:10days** will show items that have been updated in the last ten days.
 
 {% data reusables.projects.last-updated-explanation %}
 
